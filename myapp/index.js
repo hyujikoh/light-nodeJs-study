@@ -4,10 +4,13 @@ import path from 'path'
 const __dirname = path.resolve();
 const app = express();
 
-app.listen(3000);
 
 app.get('/',(req,res) => 
 {
     res.sendFile(__dirname + '/public/main.html')
 }
 );
+
+app.listen(3000, () => {
+    console.log("this log server health check is ok ")
+});
