@@ -1,12 +1,6 @@
-import {createServer} from 'http';
+import express from "express";
 
-const server = createServer((req, res) => {
-    res.writeHead(200, { 'Content-Type' : 'text/plain'}
-        );
-    res.write('this is test node js server');
-    res.end();
-});
+const app = Express();
 
-server.listen(3000, () => {
-    console.log('server is listening on port 3000');
-});
+app.listen(3000);
+
